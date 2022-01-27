@@ -1,0 +1,146 @@
+
+
+
+.top {
+    padding: auto;
+    background-color: black;
+  
+}
+.navbar-toggler{
+    background-color: rgb(15, 72, 97);
+    border-radius: 75px;
+}
+
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    background-color: rgb(60, 99, 131);
+     
+}
+
+
+
+
+.Coo img{
+   width:200vw;
+   height: 90vh;
+   object-fit:cover;
+   
+
+}
+
+
+.dark{
+    
+    padding:13px;
+    background-color: black;
+}
+
+.up{
+   
+  background-color: rgb(10, 55, 85);
+  
+}
+.up img{
+  
+    box-shadow: 0 0 10px;
+    overflow: hidden;
+}
+.up img:hover{
+  zoom: 60%;
+}
+.card{
+    background-color:none;
+}
+.card-body{
+    background-color: rgb(13, 13, 14);
+    border-color: solid white;
+ 
+}
+
+
+
+.text{
+    position: relative; 
+    padding: 10px;
+    background-color: rgb(231, 237, 240);
+    color: black;
+    /*transform: rotate(45deg);*/
+
+}
+.titre p{
+    color:whitesmoke;
+    text-align: center;
+    font-size: xx-large;
+  
+}
+
+.middle{
+  
+    background-color: rgb(244, 246, 248);
+    background-image: url( "https://picsum.photos/id/836/200/300.jpg " );
+    background-repeat: repeat;
+    background-size: 100%;
+    
+   
+   
+}
+.middle img{
+    object-fit: cover;
+   
+  
+    
+}
+.apa h3{
+    font-family: 'Roboto', bold;
+    font-size: 50px;
+
+
+
+}
+.third{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+.art{
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: rgb(33, 45, 49);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+             /*Footer*/
+
+.bottom{
+    background-color: black;
+    padding: 50px;
+    
+}
+
+                /*profils*/
+.side{
+    padding:50px;   
+    width: 20vw;
+    height: 100vh;
+    color: white;
+    background-color: black;
+    overflow: scroll;  
+    line-height: 300px;
+  
+}
+.profile{
+    width: 300vw;
+    flex: 10;
+    height: 100vh;
+    overflow:scroll;
+}
+                      /*Messages*/
+.offcanvas{
+    background-color: whitesmoke;
+}
+/*.reçus{
+    background-color: mediumorchid;
+}*/

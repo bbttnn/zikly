@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserProfile{% endblock %}
+
+{% block body %}
+    <h1>UserProfile</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ userProfile.id }}</td>
+            </tr>
+            <tr>
+                <th>Biography</th>
+                <td>{{ userProfile.Biography }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ userProfile.title }}</td>
+            </tr>
+            {% if userProfile.image != null %}
+            <tr>
+                <th>Image</th>
+                <td> <img src="/image/uploads/{{userProfile.image}}" alt="image de{{profile.title}}"></td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-primary" href="{{ path ('userProfile_index') }}">back to list</a>
+   
+
+   
+
+    {{ include('userProfile/_delete_form.html.twig') }}
+{% endblock %}

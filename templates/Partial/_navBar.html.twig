@@ -1,0 +1,73 @@
+		    
+			
+	
+			
+			<nav class=" top  navbar navbar-expand-lg  text-light">
+				<a class="navbar-brand" href="#">STEDJ</a>
+					<button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon "></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarScroll">
+						<ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+							<li class="nav-item">
+								<a class=" Accueil nav-link active" aria-current="page" href="{{path ("home")}}">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="{{path ("home_contact")}}">Contact</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+									Link
+								</a>
+								<ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+									<li>
+										<a class="dropdown-item" href="{{path ("categorie_index")}}">Categories</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href=" {{path ("artist")}}">Artistes</a>
+									</li>
+									<li><hr class="dropdown-divider"></li>
+									<li>
+										<a class="dropdown-item" href=" {{ path ("blog")}} ">blog</a>
+									</li>
+								</ul>
+							</li>							
+						</ul>
+						
+			   <ul class="navbar-nav ms-auto">
+				  {% if is_granted("ROLE_ADMIN") == true %}
+					  <li class="nav-item">
+						<a class="nav-link " href="{{path ("admin_index")}}">
+							Page Admin
+						</a>
+					</li>
+				{% endif %}
+				{% if is_granted("ROLE_USER") == true %}
+					<li class="nav-item">
+						<a class="nav-link active " href="{{path ("app_logout")}}">
+							Se déconnecter</a>
+					</li>
+			    {% else %}
+				<li class="nav-item ">
+					<a class="nav-link active " href="{{path ("app_register")}}">
+						Inscription</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link active " href="{{path ("app_login")}}">Se connecter</a>													
+						</li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+        <div class="container">	
+			{% for classStyle, messages in app.flashes %}
+			{% for message in messages %}
+			<div class="alert alert-dismissible alert-{{classStyle}}">
+			<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+			<p class="mb-0">{{message}}</p>
+			</div>
+			{% endfor %}
+			{% endfor %}
+		</div>

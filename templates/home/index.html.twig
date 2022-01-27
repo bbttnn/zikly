@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	STEDJ
+{% endblock %}
+
+
+{% block body %}
+
+	<div class=" Coo card bg-dark text-white ">
+		<img src="\image\aliane-schwartzhaupt-QdmUva6qBTk-unsplash.jpg" class="img-fluid" alt="...">
+		<div class="card-img-overlay">
+			<h1 class=" card-title text-center">welcome</h1>
+			<p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui reiciendis odio necessitatibus! Culpa esse omnis ratione dolores minima at architecto dolorem?.</p>
+			<p class="card-text ">Sit amet consectetur adipisicing elit</p>
+		</div>
+
+	</div>
+
+
+	<div class="titre container ">
+		<div class=" in p-5 ">
+			<h1 class="fs-1">Le talent - Le sérieux et La qualité</h1>
+		</div>
+		<p>Le lab</p>
+	</div>
+	<div class=" third container mb-4 ">
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 mt-5 ">
+			<div class="col ">
+				<div class="card ">
+					<img src="\image\uploads\images-jpg3-jpg-paint161c0ae61b4a6e.jpg" class="card-img-top" alt="...">
+					<div class="card-body  bg-dark ">
+						<h2>Yann TABAUT</h2>
+						<p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing  obcaecati esse porro impedit rerum? Libero, fugiat!</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card">
+					<img src="\image\uploads\fille-note-vecteur-23-214748725161be27d352e32.jpg" class="card-img-top" alt="...">
+					<div class="card-body bg-dark ">
+						<p>Premier album</p>
+						<p class="card-text">Some quick example text to build on the card title .</p>
+						<a href=" {{ path ('userProfile_show_Public',{'id':"9"})}}" class="btn btn-primary">Voir le profil</a>
+					</div>
+				</div>
+			</div>
+			<div class="col"> 
+				<div class="card">
+					<img src="\image\uploads\155003-1640661bd148a707c0.jpg" class="card-img-top" alt="...">
+					<div class="card-body bg-dark ">
+						<h2>Découverte</h2>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="art">
+		<a class="btn btn-primary-large bg-warning text-dark" href="{{path ("artist")}} ">Voir nos artistes</a>
+	</div>
+
+	<div class="apa col textcenter text-dark mt-5 mb-3 ml-3">
+		<h3>LE BLOG</h3>
+	</div>
+
+
+	<div class="middle container">
+		<div class="card mb-3 " style="max-width: ;">
+			<div class="row g-0">
+				<div class="col-md-4">
+					<img src="\image\NoiretBlancEncadreFutureDJLogo.jpg" class="img-fluid " alt="...">
+				</div>
+				<div class="col-md-8">
+					<div class="card-body bg-light">
+						<h5 class="card-title">A propos de nous</h5>
+						<p class="card-text text-dark"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam suscipit ad expedita. Voluptate, a consequatur, rerum hic officia assumenda eaque doloremque accusamus unde ex cum eveniet porro excepturi, voluptas facilis!
+						Voluptas possimus corrupti expedita dolor placeat reprehenderit a, ex sequi, quo veritatis libero aperiam. Sapiente dicta maxime laudantium suscipit labore sequi accusantium? Optio at ad, voluptate nam laborum molestiae atque.
+						Quas ea praesentium ipsum consequuntur! Deleniti explicabo vero rerum atque ad quasi doloremque, sequi dicta! Velit possimus corporis rerum itaque numquam autem neque eos quo cumque pariatur! Porro, eveniet fugiat?</p>
+						<p class="card-text">
+							<small class="text-muted">Contactez-nous pour plus de news</small>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card mb-3 " style="max-width:;">
+			<div class="col-md-4">
+				<img src="\image\uploads\photo-1563903370181-48241c5c8e2161c04a6782cb2.jpg" class="img-fluid " alt="...">
+			</div>
+			<div class="col-md-8 mb-5">
+				<div class="card-body">
+					<h5 class="card-title"><strong>zik info</strong></h5>
+					<p class="card-text-ms text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, tempore quidem! Vel maxime quis tenetur! Voluptas aliquid dicta ratione necessitatibus magnam aut maxime illum harum natus, commodi nam quod omnis.
+					Temporibus blanditiis iusto nam consequuntur magnam dolorem commodi saepe laboriosam atque provident, eaque harum, nihil non facilis vel. Alias reiciendis dolor perspiciatis. Esse adipisci nobis necessitatibus eligendi sunt earum accusamus.</p>
+					<p class="card-text">
+						<small class="text-muted">Lire plus</small>
+					</p>
+				</div>
+			</div>
+		</div>
+	
+	<div class="card mb-3 " style="max-width: ">
+		<div class="col-md-4">
+			<img src="\image\uploads\photo-1507676385008-e7fb562d11f861ce4bf52c1bc.jpg" class="img-fluid " alt="...">
+		</div>
+		<div class="col-md-8 mb-5">
+			<div class="card-body">
+				<h5 class="card-title">Concerts</h5>
+				<p class="card-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+				 Cumque vel tenetur facere quas maiores sequi suscipit aspernatur voluptatum, 
+				 doloremque esse dolor ad impedit non at? Fuga, voluptatibus. Ex, maxime a?
+				Incidunt nam quia repellendus iure nisi impedit nesciunt, quis quidem itaque non asperiores eos, sit nostrum reprehenderit temporibus repellat cum laboriosam suscipit sequi sapiente, soluta veniam nihil tempora! Possimus, itaque.
+				Ea dolor voluptatem asperiores magnam quisquam harum unde dolorem architecto aut dolores, tempore, vero officia qui ipsa optio recusandae fugit quasi odit nihil saepe. Corporis repudiandae nesciunt quod error qui!
+				Voluptatum animi, repellat ex est praesentium blanditiis velit. Odio dolorum voluptatem esse harum maxime dolorem, tenetur fugiat ut neque quos excepturi quibusdam perspiciatis impedit quidem natus eius beatae? Sunt, tenetur.</p>
+				<p class="card-text">
+					<small class="text-muted">Last updated 3 mins ago</small>
+				</p>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+{% endblock %}

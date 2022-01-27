@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserProfile{% endblock %}
+
+{% block body %}
+   
+
+   
+      
+        <div class="container g-4">
+         <h1>{{profile.title}}</h1>
+        
+            <div>
+                <h1>Biographie</h1>
+                {{profile.Biography}}
+            </div>
+            <div>
+                <p>Title</p>
+                {{profile.title}}
+            </div>
+            
+                {% if profile.image != null %}
+            <div class="image mb-5 d-flex direction-row justify-content-center">               
+                <img src="/image/uploads/{{profile.image}}" alt="image de{{profile.title}}">        
+                {% endif %}               
+            </div>
+             <a class="btn btn-primary mb-5 position-center" href=" {{path('home_contact')}} ">Laisser un message</a>
+             <a class="btn btn-primary mb-5 position-center" href=" {{path('artist')}} ">Retour</a>
+        </div>
+            
+        
+  
+   {#Todo creer btn pour msg#}
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+		<button class="btn btn-primary mb-3">{{ button_label|default('Save') }}</button>
+		{{ form_end(form) }}
+
+
+
+
+		{#{% if app.request.attributes.get('_route') =='userprofile_edit' %}
+	<h2>image</h2>
+	{% for image in image %}
+		<div>
+			<img src="{{'/image/uploads/' ~ image.name }} " alt="" width="150">
+		</div>
+         {% endfor %}
+          {% endif %}#}

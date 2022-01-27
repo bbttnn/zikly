@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Messages
+{% endblock %}
+
+{% block body %}
+	<section class="container">
+		<div class="row">
+			<div class="col">
+				<h1>Messages</h1>
+        <h2> {{ message.title}}  </h2>
+        <p>Message de {{message.sender.email}}  </p>
+        <p>le message {{message.createdAt|date}}</p>
+        <div> {{message.message}} </div>
+			
+				<button class="btn btn-primary mt-4" type="button"
+                 data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                  aria-controls="offcanvasRight">Boite de réception</button>
+                 <a href=" {{ path("received")}}" class="btn 
+                 btn-primary mt-4">Retour</a> 
+			</div>
+	<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h2 id="offcanvasRightLabel">Mes messages</h2>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+   <div class="list-group mb-3">
+   <a href=" {{path("message")}}" class="list-group-item list-group-item-action active">Accueil</a>   
+   </div>
+    <div class="list-group mb-3">
+   <a href=" {{path("received")}}" class="list-group-item list-group-item-action">Messages reçus</a>   
+   </div>
+    <div class="list-group">
+   <a href=" {{path("message")}}" class="list-group-item list-group-item-action">Messages envoyés</a>   
+   </div>
+    <div class="list-group">
+   <a href=" {{path("userProfile_index")}}" class="list-group-item list-group-item-action">Mon profil</a>   
+   </div>   
+  </div>
+</div>	
+</div>
+
+	</section>
+{% endblock %}

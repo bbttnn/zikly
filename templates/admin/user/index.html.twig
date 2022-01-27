@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+	<h1>User </h1>
+
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Email</th>
+					<th>Roles</th>				
+					<th>Firstname</th>
+					<th>Lastname</th>
+					<th>Image</th>
+					<th>IsVerified</th>
+					<th>Role</th>
+					{#<th>categorie</th>#}
+					<th>Location</th>
+					<th>actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for user in users %}
+					<tr>
+						<td>{{ user.id|default('Your default value here')  }}</td>
+						<td>{{ user.email }}</td>
+						<td>{{ user.roles ? user.roles|json_encode : '' }}</td>
+						
+						<td>{{ user.firstname }}</td>
+						<td>{{ user.lastname }}</td>
+						<td>{{ user.image }}</td>
+						<td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
+						<td>{{ user.role }}</td>
+						<td>{{ user.location }}</td>
+						{#<td>{{ user.categorie }}</td>#}
+						<td>
+							<a class="btn btn-primary mb-3" href="{{ path ('admin_user_show', {'id': user.id}) }}">show</a>
+							|
+							<a class="btn btn-primary mb-3" href="{{ path ('admin_user_edit', {'id': user.id}) }}">edit</a>
+						</td>
+					</tr>
+				</div>
+			{% else %}
+				<tr>
+					<td colspan="11">no records found</td>
+				</tr>
+			{% endfor %}
+		</table>
+	   </tbody>
+    </div>
+<a class="btn btn-primary mb-3" href="{{ path ('admin_user_new') }}">Create new</a>
+|
+<a class="btn btn-primary  mb-3" href=" {{path ("userProfile_index")}}">Retour</a>
+{% endblock %}

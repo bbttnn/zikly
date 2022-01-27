@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title%}Articles{% endblock %}
+
+{% block body %}
+<div class="container">
+        <div class="row">
+	         {% for post in posts %}
+		         <div class=" col-md-4">
+			         <div class="card mb-3 mt-5">
+				         <img src="https://picsum.photos/150.jpg" class="card-img-top" alt="...">
+				       <div class="card-body">
+					      <h2 class="card-title">{{ post.title}}</h2>
+					       <p class="card-text">{{ post.content}}</p>
+					       <p>
+						{{ post.author}}
+						-
+						{{ post.createdAt|date("d/m/y")}}
+                        </p>
+					<a class="btn btn-warning" href="/posts/{{ post.id }}">Lire l'article</a>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+</div>
+{% endblock %}

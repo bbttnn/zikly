@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Artistes
+{% endblock %}
+
+{% block body %}
+<div class="arts text-center p-5">
+<h1> Artistes du moment</h1>
+</div>     
+	<div class=" up container">
+		<div class="row">			
+				{% for profile in profiles %}
+				<div class="col-12 d-flex col-sm-auto col-md-2 col-lg-4">
+					<div class="card  mt-4 mb-4 bg-transparent text-light">
+						<img src="\image\uploads\{{profile.image}}" class="card-img-top " alt="photo de {{profile.title}}   ">
+						<div class="card-body  ">
+							<h5 class="card-title">{{profile.title}}</h5>
+							<p class="card-text">Amet consectetur adipisicing elit.
+						           Numquam culpa doloribus iure asperiores quam placeat doloremque</p>
+							<a href=" {{ path ('userProfile_show_Public',{'id':profile.id})}}" class="btn btn-primary rounded-pill ">Voir le profil</a>
+						</div>
+					</div>				
+			     </div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
