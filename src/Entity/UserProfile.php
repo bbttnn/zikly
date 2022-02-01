@@ -4,7 +4,7 @@ namespace App\Entity;
 
 
 use App\Entity\Image;
-use App\Entity\Categorie;
+
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserProfileRepository;
 use Doctrine\Common\Collections\Collection;
@@ -56,8 +56,7 @@ class UserProfile
    {
        $this->medias = new ArrayCollection();
       $this->image = new ArrayCollection();
-     // $this->categories = new ArrayCollection();
-     // $this->categorie = new ArrayCollection();
+    
     }
 
     public function getId(): ?int
