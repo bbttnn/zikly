@@ -3,7 +3,6 @@
 namespace App\Entity;
 
 use App\Entity\Message;
-use App\Entity\Categorie;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\Collection;
@@ -92,10 +91,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     private $userProfile;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Categorie::class)
-     */
-    private $categorie;
+
 
     public function __construct()
     {
@@ -343,17 +339,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getCategorie(): ?Categorie
-    {
-        return $this->categorie;
-    }
-
-    public function setCategorie(?Categorie $categorie): self
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
    
 
     
