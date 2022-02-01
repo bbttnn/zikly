@@ -66,13 +66,7 @@ class UserProfileController extends AbstractController
         ]);
     }
 
-   // #[Route('/{id}', name: 'userProfile_categorie', methods: ['GET'])]
-    //public function categorie(UserProfile $userProfile): Response
-   //{
-        //return $this->render('userProfile/categorie.html.twig', [
-           // 'userProfile' => $userProfile,
-       // ]);
-   //}
+ 
 
     #[Route('/{id}/edit', name: 'userProfile_edit', methods: ['GET','POST'])]
     public function edit(Request $request, UserProfile $userProfile,UploadService $uploader): Response
