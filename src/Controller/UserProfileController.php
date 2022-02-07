@@ -6,6 +6,7 @@ use App\Entity\Image;
 use App\Entity\UserProfile;
 use App\Form\UserProfileType;
 use App\Service\UploadService;
+use Doctrine\ORM\EntityManagerInterface;
 use App\Repository\UserProfileRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -17,6 +18,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 #[IsGranted('ROLE_USER')]
 class UserProfileController extends AbstractController
 {
+
+
     #[Route('/', name: 'userProfile_index', methods: ['GET'])]
     public function index(UserProfileRepository $userProfileRepository): Response
     { 
@@ -29,7 +32,7 @@ class UserProfileController extends AbstractController
     }
 
     #[Route('/new', name: 'userProfile_new', methods: ['GET','POST'])]
-    public function new(Request $request,UploadService  $uploader): Response
+    public function new(Request $request,UploadService  $uploader, EntityManagerInterface $entityManager): Response
     {
         $userProfile = new UserProfile();
         $form = $this->createForm(UserProfileType::class, $userProfile);
@@ -103,7 +106,7 @@ class UserProfileController extends AbstractController
     }
 
     #[Route('/{id}', name: 'userProfile_delete', methods: ['POST'])]
-    public function delete(Request $request, UserProfile $userProfile,UploadService $uploader): Response
+    public function delete(Request $request, UserProfile $userProfile,UploadService $uploader, EntityManagerInterface $entityManager): Response
     {
         if ($this->isCsrfTokenValid('delete'.$userProfile->getId(), $request->request->get('_token'))) {
             $uploader->delete($userProfile->getImage());
