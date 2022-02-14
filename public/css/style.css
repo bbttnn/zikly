@@ -8,7 +8,7 @@
 }
 .navbar-toggler{
     background-color: rgb(15, 72, 97);
-    border-radius: 75px;
+   /* border-radius: 75px;*/
 }
 
 
@@ -19,15 +19,11 @@ body {
      
 }
 
-
-
-
 .Coo img{
    width:200vw;
    height: 90vh;
    object-fit:cover;
    
-
 }
 
 
@@ -70,17 +66,23 @@ body {
 
 }
 .titre p{
-    color:whitesmoke;
+    /*color:whitesmoke;*/
     text-align: center;
     font-size: xx-large;
+    text-shadow: rgb(255, 136, 0) 1px 0 10px;
+    border-color:solid-#fff;
   
 }
+.in h1{
+    text-shadow: rgb(255, 136, 0) 1px 0 10px;
+}
+
 
 .middle{
-  
+    
     background-color: rgb(244, 246, 248);
     background-image: url( "https://picsum.photos/id/836/200/300.jpg " );
-    background-repeat: repeat;
+    background-repeat:no-repeat;
     background-size: 100%;
     
    
@@ -92,10 +94,19 @@ body {
   
     
 }
+.apa{
+    width: 50%;
+    border:solid- black ;
+    box-shadow: 10px 5px 5px rgba(56, 48, 48, 0.2);
+    
+    /*margin-right: 40%;*/
+}
 .apa h3{
     font-family: 'Roboto', bold;
-    font-size: 50px;
-
+    font-size: 60px;
+    background-color:transparent;
+    margin: 100px;
+    
 
 
 }
@@ -112,8 +123,16 @@ body {
     flex-direction: row;
     justify-content: center;
 }
-             /*Footer*/
+.art a.btn:hover{
+   background-color: rgb(51, 50, 40); 
+   box-shadow: 10px 5px 5px rgb(136, 168, 170);
 
+}
+ 
+                                
+
+
+                   /*Footer*/           
 .bottom{
     background-color: black;
     padding: 50px;
