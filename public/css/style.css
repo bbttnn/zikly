@@ -124,15 +124,12 @@ body {
     justify-content: center;
 }
 .art a.btn:hover{
-   background-color: rgb(51, 50, 40); 
+   background-color: rgb(5, 54, 63); 
    box-shadow: 10px 5px 5px rgb(136, 168, 170);
 
 }
- 
-                                
-
-
-                   /*Footer*/           
+                            
+                /*Footer*/           
 .bottom{
     background-color: black;
     padding: 50px;

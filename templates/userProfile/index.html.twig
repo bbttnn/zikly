@@ -7,57 +7,35 @@
 
 {% block body %}
 
-	<div class="container d-flex ">
-		<div class="side bg-secondary ">
-			<h1>Mes infos</h1>
-			<ol class="list-group list-group-numbered">
-				<li class="list-group-item">A list item</li>
-				<li class="list-group-item">A list item</li>
-				<li class="list-group-item">A list item</li>
-			</ol>
-		</div>
-		<div class=" profile mb-0">
-			<table class="table bg-light text-dark">
-				<tbody>
-					<tr>
-						<th>
-							<h1>
-								Profil de
-								{{app.user.firstname}}</h1>
-						</th>
-						{% if userProfile != null %}
-							<th>Id</th>
-							<td>{{ userProfile.id }}</td>
-						</tr>
-					</tr>
-					<tr>
-						<th>Biography</th>
-						<td>{{ userProfile.Biography }}</td>
-					</tr>
-					<tr>
-						<th>Title</th>
-						<td>{{ userProfile.title }}</td>
-					</tr>
-					{% if userProfile.image != null %}
-						<tr>
-							<th>Image</th>
-							<td>
-								<img class="picture" src="/image/uploads/{{userProfile.image}}" alt="image de "></td>
-						</tr>
-						<div>
-							<a class="btn btn-primary " href="{{ path ('userProfile_edit',{'id':userProfile.id})}}">edit</a>
-							<a class=" text-light btn btn-primary mb-3" href="{{ path ('message')}}">Messages</a>
-						</div>
+	<div class="container ">
 
-					{% endif %}
 
-				</tbody>
-			</table>
+		<div class="pro p-4 mt-5 mb-3 border border-secondary">
+			<h1>Profil de
+				{{app.user.firstname}}</h1>
 		</div>
+		{% if userProfile != null %}
+			<div class="bio mb-4 ">
+				<th>Biography</th>
+				<td>{{ userProfile.Biography }}</td>
+			</div>
+			<div class="name p-5 fw-bold shadow p-3 mt-5 mb-5 bg-transparent bg-body rounded">
+				<td>{{ userProfile.title }}</td>
+			</div>
+			{% if userProfile.image != null %}
+				<div class="im ">
+					<img class="picture mb-4 " src="/image/uploads/{{userProfile.image}}" alt="image de ">
+					<div class="but justify-content-between">
+						<a class="btn btn-primary ms-2 mb-3" href="{{ path ('userProfile_edit',{'id':userProfile.id})}}">edit</a>
+						<a class=" text-light btn btn-primary ms-2 mb-3" href="{{ path ('message')}}">Messages</a>
+					</div>
+				</div>
+			{% endif %}
+
+
+		</tr>
+
 	</div>
-
 {% else %}
-
 	<a class=" text-light btn btn-primary" href="{{ path ('userProfile_new') }}">Create new</a>
-
 {% endif %}{% endblock %}

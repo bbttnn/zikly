@@ -5,34 +5,35 @@
 {% endblock %}
 
 {% block body %}
-	<div class="container bg-light text-dark ">
-		<div class="row">
-			<div class=" col-md-9 ">
-				<img src="https://picsum.photos/200.jpg" class="card-img-top mt-5 justify-self-center"style="width: 20rems;" alt="...">
-				<h1>{{ post.title}}</h1>
-				<p class="card-text">{{ post.content}}</p>
-				<p>
-					{{ post.author}}
-					-
-					{{ post.createdAt|date("d/m/y")}}
-				</p>
-				<div class="lorem">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit error, corporis in, voluptatem ad laborum accusantium tempore totam unde veniam atque accusamus necessitatibus quaerat quod? Blanditiis, qui? Nesciunt, consectetur perspiciatis!
-				Quaerat non illo soluta ea, earum explicabo eveniet illum fugiat reprehenderit officia similique hic. Quia amet reprehenderit, inventore facere similique eos ipsa, ullam illum mollitia accusamus eum impedit eligendi temporibus!
-				Animi, perferendis rem. Molestiae accusamus velit nam hic, officiis minima, natus asperiores laudantium, possimus quam iusto inventore maxime illo! Suscipit sed nobis dolor, expedita ut dolorum repellat quisquam accusantium. Repudiandae.
-				Expedita, nesciunt! Ipsum corrupti sed laboriosam sequi molestiae blanditiis natus dolorum sunt accusantium! Placeat aut, distinctio vero, molestias explicabo deleniti neque aspernatur optio nobis iste, suscipit recusandae temporibus odio ex!
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit error, corporis in, voluptatem ad laborum accusantium tempore totam unde veniam atque accusamus necessitatibus quaerat quod? Blanditiis, qui? Nesciunt, consectetur perspiciatis!
-				Quaerat non illo soluta ea, earum explicabo eveniet illum fugiat reprehenderit officia similique hic. Quia amet reprehenderit, inventore facere similique eos ipsa, ullam illum mollitia accusamus eum impedit eligendi temporibus!
-				Animi, perferendis rem. Molestiae accusamus velit nam hic, officiis minima, natus asperiores laudantium, possimus quam iusto inventore maxime illo! Suscipit sed nobis dolor, expedita ut dolorum repellat quisquam accusantium. Repudiandae.
-				Expedita, nesciunt! Ipsum corrupti sed laboriosam sequi molestiae blanditiis natus dolorum sunt accusantium! Placeat aut, distinctio vero, molestias explicabo deleniti neque aspernatur optio nobis iste, suscipit recusandae temporibus odio ex!
-				</div>				
+	<div class="container-fluid bg-dark text-dark  ">
+		<div class="row d-flex justify-content-center">
+		<h1 class="lo  fw-bolder mt-4 ms-5 text-light">lorem Expedita, nesciunt!</h1>
+			<div class="col-md-6  ">
+				<div class="card bg-light mt-5 mb-4 p-4 "style"width:100%;">
+					<img src="https://picsum.photos/200.jpg" class="card-img-top " style="width:20rems;" alt="...">
+					<h1>{{ post.title}}</h1>
+					<p class="card-text-center ">{{ post.content}}</p>
+					<p>
+						{{ post.author}}
+						-
+						{{ post.createdAt|date("d/m/y")}}
+					</p>
+					<div class="lorem fw-bold">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit error, corporis in, voluptatem ad laborum accusantium tempore totam unde veniam atque accusamus necessitatibus quaerat quod? Blanditiis, qui? Nesciunt, consectetur perspiciatis!
+										Quaerat non illo soluta ea, earum explicabo eveniet illum fugiat reprehenderit officia similique hic. Quia amet reprehenderit, inventore facere similique eos ipsa, ullam illum mollitia accusamus eum impedit eligendi temporibus!
+										Animi, perferendis rem. Molestiae accusamus velit nam hic, officiis minima, natus asperiores laudantium, possimus quam iusto inventore maxime illo! Suscipit sed nobis dolor, expedita ut dolorum repellat quisquam accusantium. Repudiandae.
+										Expedita, nesciunt! Ipsum corrupti sed laboriosam sequi molestiae blanditiis natus dolorum sunt accusantium! Placeat aut, distinctio vero, molestias explicabo deleniti neque aspernatur optio nobis iste, suscipit recusandae temporibus odio ex!
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit error, corporis in, voluptatem ad laborum accusantium tempore totam unde veniam atque accusamus necessitatibus quaerat quod? Blanditiis, qui? Nesciunt, consectetur perspiciatis!
+										Quaerat non illo soluta ea, earum explicabo eveniet illum fugiat reprehenderit officia similique hic. Quia amet reprehenderit, inventore facere similique eos ipsa, ullam illum mollitia accusamus eum impedit eligendi temporibus!
+										Animi, perferendis rem. Molestiae accusamus velit nam hic, officiis minima, natus asperiores laudantium, possimus quam iusto inventore maxime illo! Suscipit sed nobis dolor, expedita ut dolorum repellat quisquam accusantium. Repudiandae.
+										Expedita, nesciunt! Ipsum corrupti sed laboriosam sequi molestiae blanditiis natus dolorum sunt accusantium! Placeat aut, distinctio vero, molestias explicabo deleniti neque aspernatur optio nobis iste, suscipit recusandae temporibus odio ex!
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="letter d-flex justify-content-center">
-		<a class="btn btn-primary mt-5 mb-3 " href="{{ path ('blog')}}">retour</a>
 		</div>
-
-		
-	</div>
-</div>
-{% endblock %}
+		<div class="letter d-flex justify-content-center">
+			<a class="btn btn-primary mt-5 mb-3 " href="{{ path ('blog')}}">retour</a>
+		</div>
+	
+</div>{% endblock %}
