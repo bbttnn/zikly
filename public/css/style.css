@@ -106,10 +106,17 @@ body {
     font-size: 60px;
     background-color:transparent;
     margin: 100px;
-    
-
-
 }
+.post img:hover{
+    box-shadow: 10px 5px 5px rgb(112, 111, 111);
+}
+
+
+.hello img{
+    height:max-content;
+    object-fit:cover;
+}
+
 .third{
     display: flex;
     flex-direction:row;
