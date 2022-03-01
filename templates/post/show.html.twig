@@ -4,23 +4,22 @@
 {% endblock %}
 
 {% block body %}
-	<div class=" container bg-warning opacity-75 text-dark mt-5 ">
+	<div class=" container bg-warning  opacity-75 text-dark mt-5 mb-3">
 		<div class="row d-flex justify-content-center">
 			<h1 class="lo  fw-bolder mt-4 ms-5 text-light">Post</h1>
 			<div class="col-md-6">
 				<div class="card bg-light mt-5 mb-4 p-4 " style"width:100%;">
-                	<img src="https://picsum.photos/200.jpg" class="card-img-top " style="width:20rems;" alt="...">											
-                        <h1>{{ post.title }}</h1>								
-						<p class="card-text-center mt-2">{{ post.content }}</p>					
-						<p>{{ post.author }}					
-						{{ post.createdAt ? post.createdAt|date('d-m-y H:i:s') : '' }}                       
-                       </p>
-					</tr>
-				</div>
+					<img src="/image/uploads/{{post.image}}" class="card-img-top " style="width:18rems;" alt="...">
+					<h1>{{ post.title }}</h1>
+					<p class="card-text-center mt-2">{{ post.content }}</p>
+					<p>{{ post.author }}
+						{{ post.createdAt ? post.createdAt|date('d/m/y H:i:s') : '' }}
+					</p>
+				</tr>
 			</div>
 		</div>
-	<a class="btn btn-primary mt-5 mb-3 rounded-pill " href="{{ path('post_index') }}">back to list</a>
-	<a class="btn btn-primary mt-5 mb-3 rounded-pill " href="{{ path('post_edit', {'id': post.id}) }}">edit</a>       	
+	</div>
+	<a class="btn btn-primary mt-5 mb-3 rounded-pill " href="{{ path('post_index')}}">back to list</a>
+	<a class="btn btn-primary mt-5 mb-3 rounded-pill " href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
 	{{ include('post/_delete_form.html.twig') }}
-    </div>
-{% endblock %}
+</div>{% endblock %}

@@ -8,7 +8,6 @@
 }
 .navbar-toggler{
     background-color: rgb(15, 72, 97);
-   /* border-radius: 75px;*/
 }
 
 
@@ -48,6 +47,7 @@ body {
 }
 .card{
     background-color:none;
+   
 }
 .card-body{
     background-color: rgb(13, 13, 14);
@@ -107,8 +107,13 @@ body {
     background-color:transparent;
     margin: 100px;
 }
-.post img:hover{
-    box-shadow: 10px 5px 5px rgb(112, 111, 111);
+.palabre h1{
+font-family:'Rampart One';
+color:rgb(143, 123, 123);
+border-radius: 90px;
+}
+.palabre .card-one img:hover{
+    border-color:red;
 }
 
 

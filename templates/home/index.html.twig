@@ -8,10 +8,11 @@
 {% block body %}
 
 	<div class=" Coo card bg-dark text-white ">
-		<img src="\image\aliane-schwartzhaupt-QdmUva6qBTk-unsplash.jpg" class="img-fluid" alt="batteur">
+		<img src="\image\aliane-schwartzhaupt-QdmUva6qBTk-unsplash.jpg" class=" img-fluid " alt="batteur">
 		<div class="card-img-overlay">
 			<h1 class=" card-title text-center">welcome</h1>
-			<p class="card-text mt-5 fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Qui reiciendis odio necessitatibus!</p>
+			<p class="card-text mt-5 fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+				Qui reiciendis odio necessitatibus!</p>
 			<p class="card-text fw-bold">Sit amet consectetur adipisicing elit</p>
 		</div>
 	</div>
@@ -21,25 +22,24 @@
 		<div class=" in p-3 shadow p-3 mt-5 mb-5 bg-transparent bg-body rounded">
 			<h1 class=" text-center">Le talent - Le sérieux -La qualité</h1>
 		</div>
-		<p class="lab ">Zik-Lab</p>
+		<p class="lab">Zik-Lab</p>
 	</div>
-	<div class=" third container  ">
-		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-3 mt-5 ">
+	<div class=" third container  p-3 ">
+		<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-3 gy-3 mt-2 mb-2 ">
 			<div class="col ">
-				<div class="card mb-2">
-					<img src="\image\uploads\images61db717007039.jpg" class="card-img-top  " alt="portrait">
+				<div class=" card mb-2 h-100 ">
+					<img src="\image\uploads\images61db717007039.jpg" class="card-img-top " alt="portrait">
 					<div class="card-body  bg-dark p-5 ">
 						<h2>Yann TABAUT</h2>
 						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
 						</p>
-
 					</div>
 				</div>
 			</div>
 			<div class="col">
-				<div class="card mb-2">
+				<div class="card mb-2 h-100">
 					<img src="\image\uploads\fille-note-vecteur-23-214748725161be27d352e32.jpg" class="card-img-top" alt="fille et notes">
-					<div class="card-body bg-dark p-4">
+					<div class="card-body bg-dark p-4 ">
 						<h2>Premier album</h2>
 						<p class="card-text">Some quick example text to build on the card title and make up  the bulk of the card's content.</p>
 
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 			<div class="col">
-				<div class="card mb-3">
+				<div class="card mb-3 h-100">
 					<img src="\image\uploads\155003-1640661bd148a707c0.jpg" class="card-img-top" alt="danseurs">
 					<div class="card-body bg-dark p-5 ">
 						<h2>Découverte</h2>
@@ -58,7 +58,7 @@
 		</div>
 	</div>
 	<div class="art bg-transparent">
-		<a class="btn btn-primary-large rounded-circle fw-bolder  text-danger" href="{{path ("artist")}} ">Voir nos artistes</a>
+		<a class="btn btn-primary rounded-pill fw-bolder  text-danger" href="{{path ("artist")}} ">Voir nos artistes</a>
 	</div>
 	<div class="container">
 		<div class="apa col me-auto text-left text-dark mt-4 mb-5 ml-3 fw-bold">
@@ -93,46 +93,38 @@
 			</div>
 		</div>
 		<div class="container ">
-		<div class="lire p-4 mb-2 rounded-circle  fw-bold">
-		<a class="rounded-circle  btn btn-dark" href="{{ path ("post_public")}} ">Plus d"articles</a>
-		</div>
+			<div class="lire p-4 mb-2 rounded-circle  fw-bold">
+				<a class="rounded-pill  btn btn-dark text-danger" href="{{ path ("blog")}} ">Plus d"articles</a>
+			</div>
 			<div class="row">
 				<div class="col md-4 mb-3">
 					<img src="https://media.istockphoto.com/photos/black-female-singer-singing-into-microphone-in-recording-studio-picture-id1284317705?b=1&k=20&m=1284317705&s=170667a&w=0&h=F7UoOb_dF4Jmsx2eYkWuehZn_EHvF6iYZtS260Cxn_o=" class="card-img-top" alt="...">
-					<div class=" card-body bg-dark">
-						<p class="card-text">Some quick example text to build on 
-																																																						the card title and make up the bulk of the card's content.
-																																																						the card title and make up the bulk
-																																																						make up the bulk of the card's content...
+					<div class=" card-body bg-dark text-light">
+						<h4>Préparer son album</h4>
+						<p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, optio. Consequatur voluptas asperiores id eius! Maiores blanditiis rem quos expedita nesciunt aliquam doloremque,
+								cupiditate magni reiciendis harum cumque doloribus impedit.
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="container d-flex mt-4 mb-3 bg-dark">
+	<div class="container  mt-4 mb-3 bg-">
 		<div class="row">
-			<div class="col md-4">
-				<div class="card-body mb-3 mt-3 ">
-					<iframe></iframe>
-				</div>
-			</div>
-			<div class="col md-4">
-				<div class="card-body mb-3 mt-3 ">
-					<iframe></iframe>
-				</div>
+			<div class="col md-4 mt-3">
+				<iframe width="460" height="360" src="https://www.youtube.com/embed/FEPFH-gz3wE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			<div class="col md-4 mb-2 mt-3 ">
-				<div class="card-body">
-					<h5 class="card-title">Zikstory</h5>
-					<h6 class="card-subtitle mb-2 text-muted">old school souvenirs</h6>
-					<p class="card-text">Some quick example text to build on the card title and
-											 make up the bulk of the card's content to build on the card content the card's content to build on the card.</p>
+				<div class="card-body fw-bold rounded bg-light opacity-75 text-dark h-100">
+					<h5 class="card-title ">Zikstory</h5>
+					<h6 class="card-subtitle mb-2 mt-3">Le GOAT</h6>
+					<p class="card-text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perspiciatis, 
+						tempora beatae molestiae labore cum nostrum qui blanditiis odio sunt minus nulla quos? Asperiores incidunt quaerat labore minus veniam molestiaetempora
+							beatae molestiae labore cum nostrum qui blanditiis odio empora beatae molestiae labore cum nostrum qui blanditiis odio sunt minus nulla quos? sunt!</p>
 					<a href="#" class="card-link">Card link</a>
 				</div>
-
 			</div>
 		</div>
-
 	</div>
 {% endblock %}

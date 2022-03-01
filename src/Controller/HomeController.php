@@ -34,7 +34,7 @@ class HomeController extends AbstractController
             $email = new TemplatedEmail();
             $email->to(new Address("rogervincentluce@gmail.com", "Contact App"))
                 ->from($contact->getEmail())
-                ->subject($contact->getSubject())
+                ->subject($contact->getSubject())                
                 ->htmlTemplate('email/contact.html.twig')
                 ->context([
                     "message" => $contact->getMessage(),
