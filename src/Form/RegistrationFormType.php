@@ -21,7 +21,7 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email',EmailType::class,[
-                'label' => 'Your email address',
+                'label' => 'Email',
                 'required' => true,
                 'attr' => [
                     'placeholder' => '',
@@ -61,7 +61,7 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
             ->add('firstname', TextType::class, [
-                'label' => 'firstname',
+                'label' => 'Prenom',
                 'required' => true,
                 'attr' => [
                     'placeholder' => '',
@@ -73,7 +73,7 @@ class RegistrationFormType extends AbstractType
                 ]
             ])   
             ->add('lastname', TextType::class, [
-                'label' => 'lastname',
+                'label' => 'Nom',
                 'required' => true,
                 'attr' => [
                     'placeholder' => '',
@@ -85,7 +85,7 @@ class RegistrationFormType extends AbstractType
                 ]
             ])           
             ->add('role', TextType::class, [
-                'label' => 'role',
+                'label' => 'Role',
                 'required' => true,
                 'attr' => [
                     'placeholder' => '',
@@ -98,7 +98,7 @@ class RegistrationFormType extends AbstractType
                 ]
             ])
             ->add('location', TextType::class, [
-                'label' => 'location',
+                'label' => 'ville',
                 'required' => true,
                 'attr' => [
                     'placeholder' => '',

@@ -9,6 +9,11 @@ class Contact
     private string $subject;
 
     private string $message;
+   
+    private string $firstname;
+     
+    private string $lastname;
+
 
    
      
@@ -73,11 +78,50 @@ class Contact
 
         return $this;
     }
+     /**
+     * Get the value of firstname
+     */ 
+
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
+
+    /**
+     * set the value of firstname
+     * 
+     * @return self
+     */
+    public function setFirstname($firstname)
+     {
+        $this->firstname = $firstname;
+        
+        return $this;
+     }
+
+
+       /**
+     * Get the value of lastname
+     */ 
+
+    public function getlastname()
+    {
+        return $this->lastname;
+    }
+    
+    /**
+     * set the value of lastname
+     * 
+     * @return self
+     */
+    public function setlastname($lastname)
+     {
+        $this->lastname = $lastname;
+        
+        return $this;
+     }
 
    
-
-
-
 }
 
 

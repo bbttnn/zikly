@@ -5,7 +5,7 @@
 
 {% block body %}
 
-	<div class="container">
+	<div class="container bg-dark mb-3 mt-3  rounded" style="height:30rem;">
 		<form method="post">
 			{% if error %}
 				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -19,8 +19,9 @@
 					<a href="{{path('userProfile_index')}}">mon profil</a>
 				</div>
 			{% endif %}
-
-			<h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
+			<div class="d-flex justify-content-center pt-3 pb-3">
+				<h1 class="h3 fw-bold">CONNEXION</h1>
+			</div>
 			<label for="inputEmail">Email</label>
 			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
 			<label for="inputPassword">Password</label>

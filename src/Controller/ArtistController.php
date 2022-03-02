@@ -14,7 +14,7 @@ class ArtistController extends AbstractController
     {
         return $this->render('artist/index.html.twig', [
             'profiles' => $userProfileRepo->findAll(),
-            'controller_name' => 'ArtistController',
+           
         ]);
     }
 }

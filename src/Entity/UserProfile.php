@@ -55,7 +55,7 @@ class UserProfile
     public function __construct()
    {
        $this->medias = new ArrayCollection();
-      $this->image = new ArrayCollection();
+     /* $this->image = new ArrayCollection();*/
     
     }
 

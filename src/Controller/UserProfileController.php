@@ -39,16 +39,18 @@ class UserProfileController extends AbstractController
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) {
-            $image = $form->get('image')->getData();
+            $images = $form->get('image')->getData();
             
             $user = $this->getUser();
-            if ($image) {
-                $filename= $uploader->upload($image);
-                $userProfile->setImage( $filename);
+            if ($images) {
+                foreach($images as $image){
+                    $filename= $uploader->upload($image);
+                    $userProfile->setImage( $filename);
+                }
+                
             }
             $userProfile->setUser($user);
         
-            $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($userProfile);
             $entityManager->flush();
 
