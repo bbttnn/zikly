@@ -3,13 +3,13 @@
 {% block title %}Blog{% endblock %}
 
 {% block body %}
-<div class=" palabre container opacity-80 bg-light mb-4">
+<div class=" palabre container  bg-light mb-4">
 	<div class="blog p-3 mt-5 text-light text-shadow">
 	<h1 class="shadow-lg p-3 mb-5 mt-3" ><strong>PALABRES et conseils . . .</strong></h1>
 	</div>
 		<div class=" row">
 			{% for post in posts %}
-				<div class=" col-md-6 gy-5 ">
+				<div class=" col-md-4 gy-5 ">
 					<div class="card mt-5 h-100" >
 						<img src="/image/uploads/{{post.image}}" class=" card-img-top" alt="image">
 						<div class="card-body">
@@ -21,7 +21,7 @@
 								{{ post.createdAt|date("d/m/y")}}
 							</p>
 						</div>
-						<div class="bouton bg-dark d-flex justify-content-end ">
+						<div class="bouton  d-flex justify-content-end ">
 						<a class="btn btn-primary mt-2 mb-2 me-4 rounded-pill" href="/posts/{{ post.id }}">Lire</a>
 						</div>
 					</div>

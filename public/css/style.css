@@ -149,22 +149,14 @@ border-radius: 90px;
 }
 
                 /*profils*/
-.side{
-    padding:50px;   
-    width: 20vw;
-    height: 100vh;
+/**.side{
+    height: 600px;     
     color: white;
     background-color: black;
     overflow: scroll;  
-    line-height: 300px;
-  
-}
-.profile{
-    width: 300vw;
-    flex: 10;
-    height: 100vh;
-    overflow:scroll;
-}
+    
+}*/
+
                       /*Messages*/
 .offcanvas{
     background-color: whitesmoke;
