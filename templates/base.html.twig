@@ -20,6 +20,7 @@
 	</head>
 	<body>
 
+
 		{% include "Partial/_navBar.html.twig" %}
 		<div class="">
 			{% for message in app.flashes( "message")%}
@@ -27,6 +28,7 @@
 				<button></button>
 			{% endfor %}
 			{% block body %}
+				<body>
 				{% include "home/index.html.twig"%}
 			{% endblock %}
 

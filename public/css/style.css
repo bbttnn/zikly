@@ -34,11 +34,11 @@ body {
 
 .up{
    
-  background-color: rgb(10, 55, 85);
+    background-color: rgb(153, 178, 190); 
   
 }
 .up img{
-  
+     
     box-shadow: 0 0 10px;
     overflow: hidden;
 }
@@ -107,13 +107,17 @@ body {
     background-color:transparent;
     margin: 100px;
 }
-.palabre h1{
-font-family:'Rampart One';
-color:rgb(143, 123, 123);
-border-radius: 90px;
+
+.blog h1{
+    font-family:'Rampart One';
+    border-radius:20px;
 }
-.palabre .card-one img:hover{
-    border-color:red;
+
+.pocus{
+    background-color: rgb(235, 250, 250);
+}
+.tosp{
+    background-color:rgb(235, 250, 250);
 }
 
 
@@ -146,6 +150,11 @@ border-radius: 90px;
     background-color: black;
     padding: 50px;
     
+    
+}
+.per p{
+    text-decoration: none;
+
 }
 
                 /*profils*/

@@ -4,33 +4,31 @@
 
 {% block body %}
 <div class=" palabre container  bg-light mb-4">
-	<div class="blog p-3 mt-5 text-light text-shadow">
+	<div class="blog p-3 mt-5 text-secondary text-shadow">
 	<h1 class="shadow-lg p-3 mb-5 mt-3" ><strong>PALABRES et conseils . . .</strong></h1>
 	</div>
-		<div class=" row">
+		<div class="pocus row">
 			{% for post in posts %}
-				<div class=" col-md-4 gy-5 ">
-					<div class="card mt-5 h-100" >
-						<img src="/image/uploads/{{post.image}}" class=" card-img-top" alt="image">
+				<div class=" col-md-4 gy-3 gx-3">
+					<div class="card mt-5 h-100">
+						<a href="/posts/{{ post.id }}"> <img src="/image/uploads/{{post.image}}" class="rounded card-img-top" alt="image"></a>
 						<div class="card-body">
 							<h2 class="card-title">{{ post.title}}</h2>
-							<p class="card-text">{{ post.content}}</p>
+							<p class="card-text"> {{ post.content}}</p>
 							<p>
 								{{ post.author}}
 								-
 								{{ post.createdAt|date("d/m/y")}}
 							</p>
-						</div>
-						<div class="bouton  d-flex justify-content-end ">
-						<a class="btn btn-primary mt-2 mb-2 me-4 rounded-pill" href="/posts/{{ post.id }}">Lire</a>
-						</div>
+						</div>						
 					</div>
 					</div>
 			{% endfor %}
 		</div>
 		<div class="d-flex justify-content-end mt-4">
-			<a href="{{path('home')}}" class="btn btn-danger mt-5 mb-3 me-4 rounded-pill mb-2 ">Accueil</a>
+			<a href="{{path('home')}}" class="btn btn-primary mt-5 mb-3 me-4 rounded-pill mb-2">Accueil</a>
 		</div>
 	</div>
+
 
 {% endblock %}

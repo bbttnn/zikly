@@ -54,9 +54,9 @@
 			</tbody>
 		</table>
 
-		<a class="btn btn-primary mt-3" href="{{ path ('admin_user_index') }}">back to list</a>
+		<a class="btn btn-primary mt-3 rounded-pill" href="{{ path ('admin_user_index') }}">back to list</a>
 
-		<a class="btn btn-warning mt-3 ms-3" href="{{ path ('admin_user_edit', {'id': user.id}) }}">edit</a>
+		<a class="btn btn-warning mt-3 ms-3 rounded-pill" href="{{ path ('admin_user_edit', {'id': user.id}) }}">edit</a>
 
 		{{ include('admin/user/_delete_form.html.twig') }}
 	</div>

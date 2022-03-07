@@ -36,6 +36,7 @@ class UserType extends AbstractType
             ])
             
             ->add('plainPassword', PasswordType::class, [
+                'label'=>'Mot de passe',
                 'mapped' => false,
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [
@@ -52,7 +53,7 @@ class UserType extends AbstractType
 
             ])
             ->add('firstname', TextType::class, [
-                'label' => 'Your firstname',
+                'label' => 'Prénom',
                 'required' => true,
                 'attr' => [
                     'placeholder' => '',
@@ -64,7 +65,7 @@ class UserType extends AbstractType
                 ],
             ])
             ->add('lastname', TextType::class, [
-                'label' => 'Your name',
+                'label' => 'Nom',
                 'required' => true,                
                 'constraints' => [
                     new NotBlank([
@@ -76,7 +77,7 @@ class UserType extends AbstractType
                 'mapped' => false,
                 'required' => false,
                 'multiple' =>false,
-                'label' => 'upload an image',
+                'label' => 'Téléchargez une image',
                 'attr' => [
                     'placeholder' => 'upload an image from your computer',
                 ],
@@ -98,10 +99,14 @@ class UserType extends AbstractType
             
             
             
-            ->add('role')
+            ->add('role',TextType::class,[
+            'label'=>'Rôle',
+            'required' => false,  
+
+            ] )
 
             ->add('location', TextType::class, [
-                'label' => "user location",
+                'label' => "Ville",
                 'required' => false,               
             ]);
     }
