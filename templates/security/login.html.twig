@@ -23,22 +23,22 @@
 				<h1 class="h3 fw-bold">CONNEXION</h1>
 			</div>
 			<label for="inputEmail">Email</label>
-			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-			<label for="inputPassword">Password</label>
-			<input type="password" name="password" id="inputPassword" class="form-control mt-2 " autocomplete="current-password" required>
+			<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class=" mb-3 form-control autocomplete="email" required autofocus">
+			<label for="inputPassword">Mot de passe</label>
+			<input type="password" name="password" id="inputPassword" class="form-control mt-2 mb-3" autocomplete="current-password" required>
 			<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 			<div class="checkbox mt-2 mb-3">
 				<label>
 					<input type="checkbox" name="_remember_me">
-					Remember me
+					Se souvenir de moi
 				</label>
 			</div>
-			<button class="btn btn-lg btn btn-primary mt-3 mb-4" type="submit">
+			<button class="btn btn-lg btn btn-primary mt-3 mb-4 rounded-pill" type="submit">
 				connexion
 			</button>
 		</form>
 		<p>
-			<a href="  {{path('app_forgot_password_request')}}">Mot de passe oublié</a>
+			<a class="btn btn-lg btn btn-primary mt-3 mb-4 rounded-pill" href="  {{path('app_forgot_password_request')}}">Mot de passe oublié</a>
 		</p>
 	</div>
 {% endblock %}
