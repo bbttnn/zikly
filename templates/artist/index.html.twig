@@ -11,7 +11,7 @@
 		<div class="row ">			
 				{% for profile in profiles %}
 				<div class="col-12 d-flex col-sm-auto col-md-2 col-lg-4">
-					<div class="card  mt-4 mb-4 bg-transparent text-light ">
+					<div class="card mt-4 mb-4 bg-transparent text-light ">
 						<a href="{{ path ('userProfile_show_Public',{'id':profile.id})}}"><img src="\image\uploads\{{profile.image}}" class="card-img-top " alt="photo de {{profile.title}}"></a>
 						<div class="card-body ">
 							<h5 class="card-title">{{profile.title}}</h5>

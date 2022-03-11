@@ -65,15 +65,17 @@ class PostController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $imageFile = $form->get('image')->getData();
-            if ($imageFile){
-                $oldpath = "";
-                if($post->getImage()){
-                    $oldpath = $post->getImage();
-                }
-                $filename = $uploader->upload($imageFile,$oldpath);
-                $post->setImage($filename);
-
+            if ($imageFile){                
+                    $oldpath = "";
+                    if($post->getImage()){
+                        $oldpath = $post->getImage();
+                    }
+                    $filename = $uploader->upload($imageFile,$oldpath);
+                    $post->setImage($filename);
+                   
+                        /*$this->getDoctrine()->getManager();*/                             
             }
+            /*$entityManager->persist($image);*/
             $entityManager->flush();
 
             return $this->redirectToRoute('post_index', [], Response::HTTP_SEE_OTHER);

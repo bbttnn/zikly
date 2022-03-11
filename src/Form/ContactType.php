@@ -19,14 +19,14 @@ class ContactType extends AbstractType
     {
         $builder
            ->add('firstname', TextType::class, [
-            'label' => 'Prenom',
+            'label' => 'Prénom',
             'required' => true,
             'attr' => [
                 'placeholder' => '',
             ],
             'constraints' => [
                 new NotBlank([
-                    'message' => "This field must be completed",
+                    'message' => "Ce champ doit être renseigné",
                 ]),
             ],
         ])
@@ -35,7 +35,7 @@ class ContactType extends AbstractType
             'required' => true,                
             'constraints' => [
                 new NotBlank([
-                    'message' => "This field must be completed",
+                    'message' => "Ce champ doit être renseigné",
                 ]),
             ],
         ])
@@ -48,10 +48,10 @@ class ContactType extends AbstractType
                 ],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'This field should be completed ',
+                        'message' => 'Ce champ doit être renseigné ',
                     ]),
                     new Email([
-                      'message' => 'Valid email address required' 
+                      'message' => 'Entrez un e-mail valide' 
                     ])
                 ],
             ])
@@ -64,7 +64,7 @@ class ContactType extends AbstractType
                 ],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'This field should be completed ',
+                        'message' => 'Ce champ doit être renseigné ',
                     ]),
                     new Length([
                         'min' => 6,
@@ -84,7 +84,7 @@ class ContactType extends AbstractType
                 ],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'This field should be completed ',
+                        'message' => 'Ce champ doit être renseigné ',
                     ]),
                     new Length([
                         'min' => 10,

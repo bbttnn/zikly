@@ -22,6 +22,20 @@ body {
    width:200vw;
    height: 90vh;
    object-fit:cover;
+}
+.Coo .zi{
+    font-family:'Rampart One';
+   font-weight: bolder;
+   color: rgb(226, 236, 236);
+ 
+}
+.com .card-text{
+    position:relative;
+   top:100px;
+    font-family:'Rampart One';
+    font-size:200%;
+    font-weight: 600;
+    color: rgb(236, 226, 226);
    
 }
 
@@ -103,6 +117,7 @@ body {
 }
 .apa h3{
     font-family: 'Roboto', bold;
+    text-shadow: rgb(255, 136, 0) 1px 0 10px;
     font-size: 60px;
     background-color:transparent;
     margin: 100px;
@@ -116,6 +131,14 @@ body {
 .pocus{
     background-color: rgb(235, 250, 250);
 }
+.pocus img{
+    position:relative;
+}
+.pocus img:hover{
+z-index:5;
+
+}
+
 .tosp{
     background-color:rgb(235, 250, 250);
 }
@@ -142,8 +165,8 @@ body {
 .art a.btn:hover{
    background-color: rgb(5, 54, 63); 
    box-shadow: 10px 5px 5px rgb(136, 168, 170);
-
 }
+
                             
                 /*Footer*/           
 .bottom{
@@ -156,15 +179,17 @@ body {
     text-decoration: none;
 
 }
-
-                /*profils*/
-/**.side{
-    height: 600px;     
-    color: white;
-    background-color: black;
-    overflow: scroll;  
+.infos{
+    background-color: rgb(205, 220, 224);
+    padding-bottom: 5px;
     
-}*/
+}
+.infos.card{
+    background-color: rgb(218, 13, 13);
+}
+
+                
+
 
                       /*Messages*/
 .offcanvas{

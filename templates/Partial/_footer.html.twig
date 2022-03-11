@@ -1,10 +1,13 @@
 <footer class=" bottom text-light " width="100%">
-	<div class="row d-flex justify-content-between">
+	<div class="row d-flex justify-content-evenly">
 		<div class="col text-center ">
 			<p>Copyright &copy 2021</p>
 		</div>
 		<div class=" per col text-center">
-			<a href=""><p>Mentions légales</p></a>
+			<a class='text-decoration-none' href=" {{path('info')}}"><p>Mentions légales</p></a>			
+		</div>
+		<div class="col text-center">
+			<a class='text-decoration-none' href=" {{path('home_contact')}}"><p>Contact</p></a>
 		</div>
 	</div>
 </footer>

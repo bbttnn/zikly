@@ -40,7 +40,7 @@ class HomeController extends AbstractController
                     "message" => $contact->getMessage(),
                 ]);
             $mailer->send($email);
-            $this->addFlash("success", "your message has been sent");
+            $this->addFlash("success", "Votre message a été envoyé");
             return $this->redirectToRoute('home', [], Response::HTTP_SEE_OTHER);
         }
 

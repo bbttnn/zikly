@@ -11,10 +11,10 @@
 			{% for post in posts %}
 				<div class=" col-md-4 gy-3 gx-3">
 					<div class="card mt-5 h-100">
-						<a href="/posts/{{ post.id }}"> <img src="/image/uploads/{{post.image}}" class="rounded card-img-top" alt="image"></a>
+						<a href="/posts/{{ post.id }}"><img src="/image/uploads/{{post.image}}" class="rounded card-img-top" alt="image"></a>
 						<div class="card-body">
 							<h2 class="card-title">{{ post.title}}</h2>
-							<p class="card-text"> {{ post.content}}</p>
+							<a class="card-text text-decoration-none" href="/posts/{{ post.id }}"><p>{{ post.content}}</p></a>
 							<p>
 								{{ post.author}}
 								-
