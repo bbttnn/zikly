@@ -37,7 +37,7 @@
 						<td>{{ user.role }}</td>
 						<td>{{ user.location }}</td>						
 						<td>
-							<a class="btn btn-primary rounded-pill mb-3" href="{{ path ('admin_user_show', {'id': user.id}) }}">show</a>
+							<a class="btn btn-primary rounded-pill mb-3" href="{{ path ('userProfile_show', {'id': user.id}) }}">show</a>
 
 							<a class="btn btn-warning rounded-pill mb-3" href="{{ path ('admin_user_edit', {'id': user.id}) }}">edit</a>
 						</td>
@@ -50,7 +50,7 @@
 			{% endfor %}
 		</table>
 	</tbody>
-	<a class="btn btn-primary mb-3 rounded-pill" href="{{ path ('admin_user_new')}}">Create new</a>
+	<a class="btn btn-primary mb-3 rounded-pill" href="{{ path ('admin_user_new')}}">Nouveau</a>
 	|
 	<a class="btn btn-primary  mb-3 rounded-pill" href=" {{path ('admin_index')}}">Admin</a>
 </div>

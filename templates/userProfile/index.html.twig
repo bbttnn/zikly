@@ -28,7 +28,7 @@
 						<img class="picture mb-4  body-rounded" src="/image/uploads/{{userProfile.image}}" alt="image de ">
 						</div>
 						<div class="but  d-flex justify-content-end">					
-						    <a class="btn btn-primary ms-2 mb-3 rounded-pill" href="{{ path ('userProfile_edit',{'id':userProfile.id})}}">edit</a>
+						    <a class="btn btn-primary ms-2 mb-3 rounded-pill" href="{{ path ('userProfile_edit',{'id':userProfile.id})}}">editer</a>
 						     <a class=" text-light btn btn-primary ms-2 mb-3 rounded-pill" href="{{ path ('message')}}">Messages</a>
 					     </div>
 				</div>
@@ -36,5 +36,5 @@
 		</tr>
 	</div>
 {% else %}
-	<a class=" text-light btn btn-primary rounded-pill" href="{{ path ('userProfile_new') }}">Create new</a>
+	<a class=" text-light btn btn-primary rounded-pill" href="{{ path ('userProfile_new') }}">Nouveau</a>
 {% endif %}{% endblock %}

@@ -3,7 +3,8 @@
 {% block title %}UserProfile{% endblock %}
 
 {% block body %}
-    <h1>UserProfile</h1>
+<div class="container">
+    <h1>Profil</h1>
 
     <table class="table">
         <tbody>
@@ -22,16 +23,14 @@
             {% if userProfile.image != null %}
             <tr>
                 <th>Image</th>
-                <td> <img src="/image/uploads/{{userProfile.image}}" alt="image de{{profile.title}}"></td>
+                <td> <img src="/image/uploads/{{userProfile.image}}" alt="image de{{userProfile.title}}"></td>
             </tr>
             {% endif %}
         </tbody>
     </table>
 
-    <a class="btn btn-primary rounded-pill" href="{{ path ('userProfile_index') }}">back to list</a>
+    <a class="btn btn-primary rounded-pill" href="{{ path ('admin_user_index') }}">Retour</a>
    
-
-   
-
     {{ include('userProfile/_delete_form.html.twig') }}
+    </div>
 {% endblock %}
