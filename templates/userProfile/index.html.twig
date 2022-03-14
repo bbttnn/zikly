@@ -16,7 +16,7 @@
 		</div>
 		{% if userProfile != null %}
 			<div class="bio mb-4 ">
-				<th>Biography</th>
+				<th>Biograph</th>
 				<td>{{ userProfile.Biography }}</td>
 			</div>
 			<div class="name p-5 fw-bold shadow p-3 mt-5 mb-5 bg-transparent bg-body rounded">
@@ -25,7 +25,7 @@
 			{% if userProfile.image != null %}
 				<div class="row" style="">
 					<div class="col d-flex justify-content-center">
-						<img class="picture mb-4  body-rounded" src="/image/uploads/{{userProfile.image}}" alt="image de ">
+						<img class="picture mb-4  body-rounded" src="/image/uploads/{{userProfile.image}}" alt="portrait ">
 						</div>
 						<div class="but  d-flex justify-content-end">					
 						    <a class="btn btn-primary ms-2 mb-3 rounded-pill" href="{{ path ('userProfile_edit',{'id':userProfile.id})}}">editer</a>
@@ -37,4 +37,5 @@
 	</div>
 {% else %}
 	<a class=" text-light btn btn-primary rounded-pill" href="{{ path ('userProfile_new') }}">Nouveau</a>
-{% endif %}{% endblock %}
+{% endif %}
+{% endblock %}

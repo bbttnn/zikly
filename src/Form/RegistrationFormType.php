@@ -28,10 +28,10 @@ class RegistrationFormType extends AbstractType
                 ],
                 'constraints' => [
                     new NotBlank([
-                        'message' => "This field must be completed",
+                        'message' => "Ce champ doit être complété",
                     ]),
                     new Email([
-                        'message'=> "email address must be valid",
+                        'message'=> "L'email doit être valide",
                     ]),
                 ],
             ])
@@ -39,7 +39,7 @@ class RegistrationFormType extends AbstractType
                 'mapped' => false,
                 'constraints' => [
                     new IsTrue([
-                        'message' => 'You should agree to our terms.',
+                        'message' => 'Acceptez nos conditions.',
                     ]),
                 ],
             ])
@@ -50,7 +50,7 @@ class RegistrationFormType extends AbstractType
                 'attr' => ['autocomplete' => 'new-password'],
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Please enter a password',
+                        'message' => 'Entrez votre mot de passe',
                     ]),
                     new Length([
                         'min' => 6,
@@ -61,14 +61,14 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
             ->add('firstname', TextType::class, [
-                'label' => 'Prenom',
+                'label' => 'Prénom',
                 'required' => true,
                 'attr' => [
                     'placeholder' => '',
                 ],
                 'constraints' => [
                     new NotBlank([
-                        'message' => "This field must be completed",
+                        'message' => "Ce champ doit être complété",
                     ]),                
                 ]
             ])   
@@ -80,7 +80,7 @@ class RegistrationFormType extends AbstractType
                 ],
                 'constraints' => [
                     new NotBlank([
-                        'message' => "This field must be completed",
+                        'message' => "Ce champ doit être complété",
                     ]),                
                 ]
             ])           
@@ -92,7 +92,7 @@ class RegistrationFormType extends AbstractType
                 ],
                 'constraints' => [
                     new NotBlank([
-                        'message' => "This field must be completed",
+                        'message' => "Ce champ doit être complété",
                     ]),
                     
                 ]
@@ -105,7 +105,7 @@ class RegistrationFormType extends AbstractType
                 ],
                 'constraints' => [
                     new NotBlank([
-                        'message' => "This field must be completed",
+                        'message' => "Ce champ doit être complété",
                     ]),
                     
                 ]
